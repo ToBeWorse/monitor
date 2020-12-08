@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWorld</title>
+</head>
+<body>
+<h1>{{ hello }}</h1>
+<h2>{{ dateStr }}</h2>
+<h3>{{ views_list }}</h3>
+<h3>{{ views_dict }}</h3>
+<h3>{{ views_dict.name | filesizeformat }}</h3>
+<h3>{{ views_str|safe }}</h3>
+{% load static %}
+{{name}}<img src= "{% static "images/b.jpg" %}">
+</body>
+</html>
