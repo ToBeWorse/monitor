@@ -27,3 +27,4 @@ def sendEmail(ip_address):
 	# 发送邮件
 	msg = '\n'.join(['From: {}'.format(FROM), 'To: {}'.format(TO), 'Subject: {}'.format(SUBJECT), '', CONTENT])
 	smtp_obj.sendmail(from_addr=FROM, to_addrs=TO, msg=msg.encode('utf-8'))
+

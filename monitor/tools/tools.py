@@ -1,4 +1,6 @@
 import socket
+import requests
+import re
 
 
 def get_host_ip():
@@ -9,3 +11,11 @@ def get_host_ip():
 	finally:
 		s.close()
 	return ip
+
+def get_out_ip():
+	html_text = requests.get("https://ip.cn/").text
+	print(html_text)
+	# （1）正则匹配方式1
+	ip_text = re.search(u"<p>您现在的 IP：<code>(.*?)</code></p>", html_text)
+	print
+	ip_text.group(1)
