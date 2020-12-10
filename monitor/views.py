@@ -26,6 +26,7 @@ def helloWorld(request):
 def ipMonitor(request):
 	ip = tools.get_host_ip()
 	ip_adress = {"ip": ip}
-	tools.get_out_ip()
-	sendEmail.sendEmail(ip)
+	ip_out_adress = tools.get_out_ip()
+	ip_adress = {"ip": ip_out_adress}
+	sendEmail.sendEmail(ip_out_adress)
 	return render(request, "IpMonitor.html", {"ip_address": ip_adress})
