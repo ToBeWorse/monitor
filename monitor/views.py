@@ -30,3 +30,6 @@ def ipMonitor(request):
 	ip_adress = {"ip": ip_out_adress}
 	sendEmail.sendEmail(ip_out_adress)
 	return render(request, "IpMonitor.html", {"ip_address": ip_adress})
+
+def startTimeJob(request):
+	tools.jobs();

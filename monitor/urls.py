@@ -23,4 +23,5 @@ urlpatterns = [
     path('index/', views.hello),
     path('hello/', views.helloWorld),
     path('ip/', views.ipMonitor),
+    path('startjob/',views.startTimeJob)
 ]
